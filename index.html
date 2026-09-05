@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consular Request Checker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Consular Request Checker</h1>
+      <h1>شاشة الإستعلام عن الخدمات القنصلية</h1>
+      <p class="intro">Enter your request ID and phone number to check the status of your consular request.</p>
+
+      <form id="checkForm" novalidate>
+        <label for="requestId">Request ID - رقم الطلب</label>
+        <input id="requestId" name="requestId" type="text" placeholder="e.g. REQ-10001" autocomplete="off" required>
+
+        <label for="phone">Phone Number - رقم الهاتف</label>
+        <input id="phone" name="phone" type="tel" placeholder="e.g. +1 212 555 0101" autocomplete="tel" required>
+
+        <button id="checkButton" type="submit">Check - التحقق</button>
+      </form>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+      <div id="offlineLoader" class="offline-loader" hidden>
+        <strong>Offline testing:</strong>
+        <span>Select the included <code>database.xlsx</code> file.</span>
+        <input id="databasePicker" type="file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+      </div>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

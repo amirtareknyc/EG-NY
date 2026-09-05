@@ -1,0 +1,136 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.container {
+  width: min(760px, calc(100% - 30px));
+  margin: 50px auto;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 22px rgba(0,0,0,.08);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.intro {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 15px 0 7px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #cfd5db;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #9ec5fe;
+  border-color: #6ea8fe;
+}
+
+button {
+  margin-top: 22px;
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 7px;
+  background: #155eef;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.message {
+  margin-top: 20px;
+}
+
+.error {
+  padding: 12px;
+  border-radius: 7px;
+  background: #fff1f1;
+  color: #a40000;
+}
+
+.success {
+  padding: 12px;
+  border-radius: 7px;
+  background: #eefaf0;
+  color: #176b2c;
+}
+
+.result {
+  margin-top: 15px;
+  border: 1px solid #e0e4e8;
+  border-radius: 9px;
+  padding: 18px;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-row:last-child {
+  border-bottom: 0;
+}
+
+.result-label {
+  font-weight: 700;
+}
+
+.appointment {
+  margin-top: 22px;
+  padding: 16px;
+  background: #f0f6ff;
+  border-radius: 8px;
+}
+
+.appointment a {
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .card { padding: 20px; }
+  .result-row { grid-template-columns: 1fr; gap: 3px; }
+}
+
+.offline-loader {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px dashed #cfd5db;
+  border-radius: 8px;
+  background: #fafafa;
+  display: grid;
+  gap: 10px;
+}
+.offline-loader input { background: #fff; }
